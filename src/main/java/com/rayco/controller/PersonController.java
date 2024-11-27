@@ -18,7 +18,7 @@ public class PersonController {
         return personService.findAll();
     }
 
-    @PostMapping("/postPerson")
+    @PostMapping("/savePerson")
     public Mono<PersonEntity> save(@RequestBody PersonEntity person){
         return personService.save(person);
     }
@@ -26,6 +26,16 @@ public class PersonController {
     @GetMapping("/getPersonsByEdad/{edad}")
     public Flux<PersonEntity> getPersonByEdad(@PathVariable("edad") int edad){
         return personService.findPersonByEdad(edad);
+    }
+
+    @PostMapping("/updatePerson")
+    public Mono<PersonEntity> updatePerson(@RequestBody PersonEntity person){
+        return personService.update(person);
+    }
+
+    @DeleteMapping("/deletePerson/{id}")
+    public void deletePerson(@PathVariable("id") String id){
+        personService.delete(id);
     }
 
 }

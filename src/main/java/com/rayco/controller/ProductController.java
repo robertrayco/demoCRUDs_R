@@ -31,5 +31,4 @@ public class ProductController {
         return prodServ.getFillProductByStock(stok);
     }
 
-
 }

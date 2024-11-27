@@ -24,7 +24,7 @@
     <project.buid.sourceEncoding>UTF-8</project.buid.sourceEncoding>
   </properties>
 
-  <dependencies>com
+  <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>

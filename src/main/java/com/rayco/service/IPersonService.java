@@ -12,4 +12,8 @@ public interface IPersonService {
     Mono<PersonEntity> save(PersonEntity person);
 
     Flux<PersonEntity> findPersonByEdad(int edad);
+
+    Mono<PersonEntity> update(PersonEntity person);
+
+    void delete(String id);
 }

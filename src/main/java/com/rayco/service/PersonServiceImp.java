@@ -28,4 +28,14 @@ public class PersonServiceImp implements IPersonService {
         return repo.findAll()
                 .filter(x -> x.getEdad()==edad);
     }
+
+    @Override
+    public Mono<PersonEntity> update(PersonEntity person) {
+        return repo.save(person);
+    }
+
+    @Override
+    public void delete(String id) {
+        repo.deleteById(id).subscribe();
+    }
 }
