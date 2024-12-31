@@ -15,4 +15,6 @@ public class ProductEntity {
     private int stock;
     private double precio;
 
+    private Boolean estado;
+
 }
